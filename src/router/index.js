@@ -1,19 +1,19 @@
-import PageHome from "../components/PageHome";
-import PageThread from "../components/PageThread";
-import PageNotFound from "../components/PageNotFound";
+import Home from "@/pages/Home";
+import ThreadShow from "@/pages/ThreadShow";
+import NotFound from "@/pages/NotFound";
 import {createRouter, createWebHistory} from 'vue-router'
-import sourceData from '../data.json'
+import sourceData from '@/data.json'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: PageHome
+    component: Home
   },
   {
     path: '/thread/:id',
     name: 'PageThread',
-    component: PageThread,
+    component: ThreadShow,
     props: true,
     BeforeEnter(to, from, next) {
 
@@ -32,7 +32,7 @@ const routes = [
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: PageNotFound
+    component: NotFound
   },
 
 ]

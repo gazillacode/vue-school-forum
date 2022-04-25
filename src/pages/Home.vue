@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import sourceData from '../data.json'
-import ThreadList from "./ThreadList";
+import sourceData from '@/data.json'
+import ThreadList from "@/components/ThreadList";
 
 export default {
   components: {
